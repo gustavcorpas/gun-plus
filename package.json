@@ -1,0 +1,18 @@
+{
+  "name": "gun-plus",
+  "version": "1.0.0",
+  "description": "GunPlus is a package that enhances the functionality and usability of GunDB, a decentralized database, by providing convenience methods and wrapper classes. It simplifies the integration of GunDB into your projects and offers additional features for efficient data management and communication in decentralized applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gun",
+    "gundb"
+  ],
+  "author": "Snoobeedoo",
+  "license": "MIT",
+  "dependencies": {
+    "gun": "^0.2020.1240"
+  }
+}
