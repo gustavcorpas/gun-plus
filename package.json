@@ -12,6 +12,7 @@
   ],
   "author": "Snoobeedoo",
   "license": "MIT",
+  "repository": "https://github.com/gustavcorpas/gun-plus",
   "dependencies": {
     "gun": "^0.2020.1240"
   }
