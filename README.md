@@ -103,4 +103,4 @@ We welcome contributions! If you'd like to contribute to GunPlus, please see our
 
 ## License
 
-GunPlus is licensed under the [MIT License](./LICENSE.md).
+GunPlus is licensed under the [MIT License](./LICENSE).
