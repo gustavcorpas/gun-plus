@@ -3,6 +3,8 @@
 
 GunPlus is a library that extends the functionality of the decentralized database system [Gun](https://gun.eco/) by providing convenience functions and wrapper functionality.
 
+It is based on the princples from [this article](https://gustavcorpas.medium.com/a-beginners-guide-to-decentralized-database-programming-with-gundb-c009d77207ad).
+
 ## Features
 
 - Define you database and get intellisense.
