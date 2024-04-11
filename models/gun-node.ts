@@ -96,6 +96,42 @@ export default class GunNode<T extends GunNode<any> = GunNode<any>> {
         return {subscribe}
     }
 
+    /**
+     * Two way data-binding for gun.
+     * This will return only value in the subscribe callback.
+     * If you need more advanced functionality you need to use a combination of `node.watch` and `node.put`.
+     * 
+     * @example
+     * const store = node.bind("");
+     * store.set("hello");
+     * store.subscribe(value => console.log(value));
+     */
+    bind<T2 extends GunValueSimple>(intial: T2) {
+        const store = this.watch(intial);
+        let value: T2 | null = intial;
+
+        const subscribe = (cb: (new_value: T2 | null) => any) => {
+            const unsubscriber = store.subscribe(response => {
+                value = response.value;
+                cb(response.value);
+            });
+
+            return unsubscriber
+        }
+
+        const set = (new_value: T2) => {
+            value = new_value;
+            this.put(value);
+        }
+
+        const update = (cb: (new_value: T2 | null) => T2) => {
+            value = cb(value);
+            this.put(value);
+        }
+
+        return {subscribe, set, update}
+    }
+
 
     // ITERATION LOGIC
 
